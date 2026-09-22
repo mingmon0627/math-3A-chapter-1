@@ -6,7 +6,21 @@
 \renewcommand{\theexample}{\thesection.\arabic{example}}
 \newtheorem{exercise}{類題}[section]
 \renewcommand{\theexercise}{\thesection.\arabic{exercise}}
+\usepackage[most]{tcolorbox}
 
+\newtcolorbox{proofbox}{
+    breakable,
+    colback=white,
+    colframe=black!45,
+    boxrule=0.5pt,
+    arc=1mm,
+    left=4mm,
+    right=4mm,
+    top=3mm,
+    bottom=3mm,
+    before skip=8pt,
+    after skip=8pt
+}
 
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
@@ -21,106 +35,130 @@
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
-\title{數學3A}
+\title{數學3A:三角函數}
 \author{LBJ}
 
 \begin{document}
 \maketitle
 
-\begin{abstract}
-\end{abstract}
-
 \section{一點點的仙貝芝士}
 
 學習三角2前，要知道高一學的三角函數都是在圓之中，依這個觀念繼續下去，會遇到高一的最終境界"單位圓"，不過基礎的也要先知道，像是在座標平面上$\sin$ 在一、二象限為正；$\cos$ 在一、四象限為正；$\tan$ 在一、三象限為正
 ，然後在廣義定義(圓)中的基礎三角比:
-\[\sin \theta = \frac{y}{r}, \cos \theta = \frac{x}{r}, \tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{y}{x}\]
+\[\boxed{\sin \theta = \frac{y}{r}, \cos \theta = \frac{x}{r}, \tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{y}{x}}\]
 以及最基礎的換算和平方關係，也就是"奇變偶不變，正負看象限"，平方關係在現在的108課綱下唯一能學的就只有$\sin^2\theta + \cos^2\theta = 1$ 不然在舊課綱下還有:
-\[\quad1 + \tan^2\theta = \sec^2\theta, 1 + \cot^2\theta = \csc^2\theta\]
+\[\boxed{\quad1 + \tan^2\theta = \sec^2\theta, 1 + \cot^2\theta = \csc^2\theta}\]
 但因為那不在108課綱內，所以如果老師沒教，那就不教吧反正我只寫重要的東西，講點結論，在進三角2前，絕對要先把三角1的所有觀念全部釐清(三角2只會更難)，那如果你認為你都釐清了，就進入第一章吧
 \section{第一章: 弳與弧度量}
 
 \subsection{弳(弧度)的世界}
 
  雖說是弳的世界，但其實弳才是能用座標表示的，因為在座標平面上沒有(角度)這個量值存在，所以數學家才用了弳來表示三角函數在座標平面上的樣子，那要怎麼定義呢?如下，因為在單位圓下(r=1)中，圓的周長為:
-\[2\pi = 360^\circ \]
+\[\boxed{2\pi = 360^\circ} \]
 因此在之後的運算中可以得出以下三個重要的東西:
-\[ \pi = 180^\circ, \quad1 = \frac{180^\circ}{\pi} \approx 57.3^\circ, \quad1^\circ=\frac{\pi}{180^\circ} \]
+\[ \boxed{\pi = 180^\circ, \quad1 = \frac{180^\circ}{\pi} \approx 57.3^\circ, \quad1^\circ=\frac{\pi}{180^\circ}} \]
 有了這些東西之後，我們就能把角度轉換成弳，也能把弳轉換成角度(以初學來說這很好用)，然後如果以"弳"表示角的大小時，"弳"通常省略不寫。先試試一些轉換的題目吧!
 
 \begin{example}
 \normalfont 
 (1) 試問 $72^\circ$ 與 $480^\circ$ 分別為多少弧度？   (2) 試問 $\frac{11}{12}\pi$ 與 $\frac{7}{2}\pi$ 分別為多少度？
 \end{example}
-
+\begin{exercise}
+\normalfont
+    在座標平面上，若$\theta$ 與$870^\circ$ 為同界角，且$0\le \theta < 2\pi$ ，則 $\theta$ 的弧度為多少弳? 
+\end{exercise}
 
 \subsection{弧長與弳的關係}
 
+在半徑為r的圓上，當弧長s的圓弧所對的圓新錶為$\theta$弳時，則:
+\[\boxed{\theta = \frac{s}{r}}\]
+但是通常在使用時我們都是用:
+\[\boxed{s = r\theta}\]
+不過不管你是用$\theta = \frac{s}{r}$ 還是 $s = r\theta$ ，用公式時有想過他是怎麼出現的嗎?如果沒有，那就把他證出來，證明如下:
+\begin{proofbox}
 
+設半徑為 $r$，弧長為 $s$，
+若圓心角以角度表示為 $\alpha^\circ$，則由國中所學的弧長公式，
 
-Note that your figure will automatically be placed in the most appropriate place for it, given the surrounding text and taking into account other figures or tables that may be close by. You can find out more about adding images to your documents in this help article on \href{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}{including images on Overleaf}.
+\[
+s=2\pi r\cdot\frac{\alpha}{360}.
+\]
 
+令同一個角的弧度數為 $\theta$，因為
 
+\[
+180^\circ=\pi\text{弳},
+\]
 
-\subsection{How to add Tables}
+所以
 
-Use the table and tabular environments for basic tables --- see Table~\ref{tab:widgets}, for example. For more information, please see this help article on \href{https://www.overleaf.com/learn/latex/tables}{tables}.
+\[
+\theta=\frac{\alpha\pi}{180},
+\qquad
+\alpha=\frac{180\theta}{\pi}.
+\]
 
+代回原式，
 
+\begin{align*}
+s
+&=2\pi r\cdot
+\frac{180\theta/\pi}{360} \\[2mm]
+&=2\pi r\cdot\frac{\theta}{2\pi} \\[2mm]
+&=r\theta.
+\end{align*}
 
-\subsection{How to add Comments and Track Changes}
+移位一下可得
 
-Comments can be added to your project by highlighting some text and clicking ``Add comment'' in the top right of the editor pane. To view existing comments, click on the Review menu in the toolbar above. To reply to a comment, click on the Reply button in the lower right corner of the comment. You can close the Review pane by clicking its name on the toolbar when you're done reviewing for the time being.
+\[
+\theta=\frac{s}{r}
+\]
 
-Track changes are available on all our \href{https://www.overleaf.com/user/subscription/plans}{premium plans}, and can be toggled on or off using the option at the top of the Review pane. Track changes allow you to keep track of every change made to the document, along with the person making the change.
+\hfill $\square$
+\end{proofbox}
+知道怎麼來的以後，就會出現這小節最愛出的時鐘問題了，我放個非常輕鬆就能破解的流氓破題法，那就是直接套公式，如下:
 
-\subsection{How to add Lists}
+\[|30^\circ h-5.5^\circ m|\]
 
-You can make lists with automatic numbering \dots
+其中h就是題目中的小時數，m就是題目中的分鐘數，但要注意這方法得出來數是角度，而且要自己分辨是不是最小夾角，如果不是要再拿$360^\circ$扣掉，如果題目問弳要自己換算喔!試試以下題目:
+\begin{example}
+\normalfont
+    當時鐘的時間為7:30時，其時針與分針所夾的夾角較小的角為幾弳?
+\end{example}
+\begin{exercise}
+\normalfont
+    在7點到8點之間，有兩個時刻$7:m_1$和$7:m_2$，這兩個時刻的分針與時針所夾的較小角度恰好為$75^\circ$，求$m_1 + m_2$為多少?
+\end{exercise}
 
-\begin{enumerate}
-\item Like this,
-\item and like this.
-\end{enumerate}
-\dots or bullet points \dots
-\begin{itemize}
-\item Like this,
-\item and like this.
-\end{itemize}
+\subsection{扇形的面積}
 
-\subsection{How to write Mathematics}
+到了這小節，會出現最麻煩的幾何，大部分解法都是在扇形裡面畫個三角形，然後就能用正弦定裡或餘弦定裡繼續往下做了，或者是給周長問扇形最大面積之類用算幾不等式解的題目，不過重要的還是要說一下，設半徑為r，中心角為$\theta$弳，則:
 
-\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-\[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-      = \frac{1}{n}\sum_{i}^{n} X_i\]
-denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+\[\text{扇形面積 } A=\frac{1}{2}r^2\theta=\frac{1}{2}rs \]
+重點也沒什麼，放個幾題意思意思一下就好，然後因為我懶得畫圖，所以只有基礎題喔
+\begin{example}
+\normalfont
+    已知一扇形，其圓新角所對應之弧長值的3倍與此扇形面積值相等，求此扇形半徑為?
+\end{example}
+\begin{exercise}
+\normalfont
+    一個周長為c的扇形，當弧長為幾公分時，扇形會有最大面積為多少平方公分?(溫馨提示:答案絕對不是$2\pi$和$\pi r ^2$)
+\end{exercise}
 
+\subsection{以弳為單位的三角比}
 
-\subsection{How to change the margins and paper size}
+這小節太簡單，如果不熟就是把弳轉換成角度再用高一學的換算往下做，如果熟了就直接用看的，題目我就放個基本的比大小就好
+\begin{example}
+\normalfont
+    請排出$a = \cos{1}$，$b = \cos{2}$，$c=\cos{3}$，$d=\cos{4}$，$e=\cos{5}$的大小順序
+\end{example}
+\begin{exercise}
+\normalfont
+    請排出$a=\sin1^\circ$，$b =\sin{1}$，$c=\sin{\pi^\circ}$，$d=\sin{\pi}$的大小順序    
+\end{exercise}
 
-Usually the template you're using will have the page margins and paper size set correctly for that use-case. For example, if you're using a journal article template provided by the journal publisher, that template will be formatted according to their requirements. In these cases, it's best not to alter the margins directly.
-
-If however you're using a more general template, such as this one, and would like to alter the margins, a common way to do so is via the geometry package. You can find the geometry package loaded in the preamble at the top of this example file, and if you'd like to learn more about how to adjust the settings, please visit this help article on \href{https://www.overleaf.com/learn/latex/page_size_and_margins}{page size and margins}.
-
-\subsection{How to change the document language and spell check settings}
-
-Overleaf supports many different languages, including multiple different languages within one document.
-
-To configure the document language, simply edit the option provided to the babel package in the preamble at the top of this example project. To learn more about the different options, please visit this help article on \href{https://www.overleaf.com/learn/latex/International_language_support}{international language support}.
-
-To change the spell check language, simply open the Overleaf menu at the top left of the editor window, scroll down to the spell check setting, and adjust accordingly.
-
-\subsection{How to add Citations and a References List}
-
-You can simply upload a \verb|.bib| file containing your BibTeX entries, created with a tool such as JabRef. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|. You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
-
-If you have an \href{https://www.overleaf.com/user/subscription/plans}{upgraded account}, you can also import your Mendeley or Zotero library directly as a \verb|.bib| file, via the upload menu in the file-tree.
-
-\subsection{Good luck!}
-
-We hope you find Overleaf useful, and do take a look at our \href{https://www.overleaf.com/learn}{help library} for more tutorials and user guides! Please also let us know if you have any feedback using the \textbf{Contact us} link at the bottom of the Overleaf menu --- or use the contact form at \url{https://www.overleaf.com/contact}.
-
-\bibliographystyle{alpha}
-\bibliography{sample}
+\section{第二章:三角函數的圖形}
+\section{第三章:三角的和差角公式}
+\section{第四章:正餘弦疊合}
 
 \end{document}
