@@ -1,6 +1,10 @@
 \documentclass{article}
 \usepackage[fontset=ubuntu, UTF8]{ctex}
 \usepackage{bm}
+\usepackage{amsmath, amssymb}
+\newtheorem{example}{範例}[section]
+\renewcommand{\theexample}{\thesection.\arabic{example}}
+
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
 \usepackage[english]{babel}
@@ -41,9 +45,11 @@
 \[ \pi = 180^\circ, \quad1 = \frac{180^\circ}{\pi} \approx 57.3^\circ, \quad1^\circ=\frac{\pi}{180^\circ} \]
 有了這些東西之後，我們就能把角度轉換成弳，也能把弳轉換成角度(以初學來說這很好用)，然後如果以"弳"表示角的大小時，"弳"通常省略不寫。先試試一些轉換的題目吧!
 
-\newtheorem{example}{範例}[subsection]
-(1)試問$\quad 72^\circ$ 與 $\quad 480^\circ$ 分別為多少弳?
-\quad (2)試問$\frac{11\pi}{12}$ 弳與$\frac{7}{2}$ 弳分別為多少度?
+\begin{example}
+\normalfont 
+(1) 試問 $72^\circ$ 與 $480^\circ$ 分別為多少弧度？   (2) 試問 $\frac{11}{12}\pi$ 與 $\frac{7}{2}\pi$ 分別為多少度？
+\end{example}
+
 
 \subsection{弧長與弳的關係}
 
