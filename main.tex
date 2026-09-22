@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage[fontset=ubuntu, UTF8]{ctex}
+\usepackage{bm}
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{數學3A}
+\author{LBJ}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+\section{一點點的仙貝芝士}
+
+學習三角2前，要知道高一學的三角函數都是在圓之中，依這個觀念繼續下去，會遇到高一的最終境界"單位圓"，不過基礎的也要先知道，像是在座標平面上$\sin$ 在一、二象限為正；$\cos$ 在一、四象限為正；$\tan$ 在一、三象限為正
+，然後在廣義定義(圓)中的基礎三角比:
+\[\sin \theta = \frac{y}{r}, \cos \theta = \frac{x}{r}, \tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{y}{x}\]
+以及最基礎的換算和平方關係，也就是"奇變偶不變，正負看象限"，平方關係在現在的108課綱下唯一能學的就只有$\sin^2\theta + \cos^2\theta = 1$ 不然在舊課綱下還有:
+\[\quad1 + \tan^2\theta = \sec^2\theta, 1 + \cot^2\theta = \csc^2\theta\]
+但因為那不在108課綱內，所以如果老師沒教，那就不教吧反正我只寫重要的東西，講點結論，在進三角2前，絕對要先把三角1的所有觀念全部釐清(三角2只會更難)，那如果你認為你都釐清了，就進入第一章吧
+\section{第一章: 弳與弧度量}
+
+\subsection{弳(弧度)的世界}
+
+ 雖說是弳的世界，但其實弳才是能用座標表示的，因為在座標平面上沒有(角度)這個量值存在，所以數學家才用了弳來表示三角函數在座標平面上的樣子，那要怎麼定義呢?如下，因為在單位圓下(r=1)中，圓的周長為:
+\[2\pi = 360^\circ \]
+因此在之後的運算中可以得出以下三個重要的東西:
+\[ \pi = 180^\circ, \quad1 = \frac{180^\circ}{\pi} \approx 57.3^\circ, \quad1^\circ=\frac{\pi}{180^\circ} \]
+有了這些東西之後，我們就能把角度轉換成弳，也能把弳轉換成角度(以初學來說這很好用)，然後如果以"弳"表示角的大小時，"弳"通常省略不寫。先試試一些轉換的題目吧!
+
+\newtheorem{example}{範例}[subsection]
+(1)試問$\quad 72^\circ$ 與 $\quad 480^\circ$ 分別為多少弳?
+\quad (2)試問$\frac{11\pi}{12}$ 弳與$\frac{7}{2}$ 弳分別為多少度?
+
+\subsection{弧長與弳的關係}
+
+
+
+Note that your figure will automatically be placed in the most appropriate place for it, given the surrounding text and taking into account other figures or tables that may be close by. You can find out more about adding images to your documents in this help article on \href{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}{including images on Overleaf}.
+
+
+
+\subsection{How to add Tables}
+
+Use the table and tabular environments for basic tables --- see Table~\ref{tab:widgets}, for example. For more information, please see this help article on \href{https://www.overleaf.com/learn/latex/tables}{tables}.
+
+
+
+\subsection{How to add Comments and Track Changes}
+
+Comments can be added to your project by highlighting some text and clicking ``Add comment'' in the top right of the editor pane. To view existing comments, click on the Review menu in the toolbar above. To reply to a comment, click on the Reply button in the lower right corner of the comment. You can close the Review pane by clicking its name on the toolbar when you're done reviewing for the time being.
+
+Track changes are available on all our \href{https://www.overleaf.com/user/subscription/plans}{premium plans}, and can be toggled on or off using the option at the top of the Review pane. Track changes allow you to keep track of every change made to the document, along with the person making the change.
+
+\subsection{How to add Lists}
+
+You can make lists with automatic numbering \dots
+
+\begin{enumerate}
+\item Like this,
+\item and like this.
+\end{enumerate}
+\dots or bullet points \dots
+\begin{itemize}
+\item Like this,
+\item and like this.
+\end{itemize}
+
+\subsection{How to write Mathematics}
+
+\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+\[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+      = \frac{1}{n}\sum_{i}^{n} X_i\]
+denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+
+
+\subsection{How to change the margins and paper size}
+
+Usually the template you're using will have the page margins and paper size set correctly for that use-case. For example, if you're using a journal article template provided by the journal publisher, that template will be formatted according to their requirements. In these cases, it's best not to alter the margins directly.
+
+If however you're using a more general template, such as this one, and would like to alter the margins, a common way to do so is via the geometry package. You can find the geometry package loaded in the preamble at the top of this example file, and if you'd like to learn more about how to adjust the settings, please visit this help article on \href{https://www.overleaf.com/learn/latex/page_size_and_margins}{page size and margins}.
+
+\subsection{How to change the document language and spell check settings}
+
+Overleaf supports many different languages, including multiple different languages within one document.
+
+To configure the document language, simply edit the option provided to the babel package in the preamble at the top of this example project. To learn more about the different options, please visit this help article on \href{https://www.overleaf.com/learn/latex/International_language_support}{international language support}.
+
+To change the spell check language, simply open the Overleaf menu at the top left of the editor window, scroll down to the spell check setting, and adjust accordingly.
+
+\subsection{How to add Citations and a References List}
+
+You can simply upload a \verb|.bib| file containing your BibTeX entries, created with a tool such as JabRef. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|. You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
+
+If you have an \href{https://www.overleaf.com/user/subscription/plans}{upgraded account}, you can also import your Mendeley or Zotero library directly as a \verb|.bib| file, via the upload menu in the file-tree.
+
+\subsection{Good luck!}
+
+We hope you find Overleaf useful, and do take a look at our \href{https://www.overleaf.com/learn}{help library} for more tutorials and user guides! Please also let us know if you have any feedback using the \textbf{Contact us} link at the bottom of the Overleaf menu --- or use the contact form at \url{https://www.overleaf.com/contact}.
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
